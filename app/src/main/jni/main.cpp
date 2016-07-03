@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include "simple_myapplication_Test.h"
+#include "test.h"
 
 JNIEXPORT jstring JNICALL Java_simple_myapplication_Test_getInt
         (JNIEnv *env, jobject obj) {
@@ -13,11 +14,7 @@ JNIEXPORT void JNICALL
 Java_simple_myapplication_Test_opArr(JNIEnv *env, jobject instance, jintArray a_) {
     // TODO
     jint *a = env->GetIntArrayElements(a_, NULL);
-    a[0] = 10087;
-
     int len=env->GetArrayLength(a_);
-    for (int i = 0; i < len; ++i) {
-        a[i]=i*3+i%17;
-    }
+    toGrey(a,len);
     env->ReleaseIntArrayElements(a_, a, 0);
 }
