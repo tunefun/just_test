@@ -25,10 +25,10 @@ public class MainActivity extends Activity {
         int[] x=new int[10000000];
         long time=System.currentTimeMillis();
         test.opArr(x);
-        tv.setText("natve:"+x[10]+",time:"+(System.currentTimeMillis()-time));
+        tv.setText("natve:"+x[0]+",time:"+(System.currentTimeMillis()-time));
         time=System.currentTimeMillis();
         test.opArr1(x);
-        tv2.setText("java:"+x[10]+",time:"+(System.currentTimeMillis()-time));
+        tv2.setText("java:"+x[0]+",time:"+(System.currentTimeMillis()-time));
 
     }
 }
