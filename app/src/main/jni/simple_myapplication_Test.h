@@ -13,12 +13,13 @@ extern "C" {
  * Method:    getInt
  * Signature: ()I
  */
-JNIEXPORT jstring JNICALL Java_simple_myapplication_Test_getInt
-  (JNIEnv *, jobject);
-
 JNIEXPORT void JNICALL
-        Java_simple_myapplication_Test_opArr(JNIEnv *env, jobject instance, jintArray a_);
-
+        Java_simple_myapplication_Convert_1C_CtoGrey(JNIEnv *env, jclass type, jintArray m_);
+JNIEXPORT void JNICALL
+        Java_simple_myapplication_Convert_1C_CpreDo(JNIEnv *env, jclass type, jintArray p1_,
+                                                    jintArray p2_);
+JNIEXPORT void JNICALL
+        Java_simple_myapplication_Convert_1C_Ccomb(JNIEnv *env, jclass type, jintArray p1_, jintArray p2_);
 #ifdef __cplusplus
 }
 #endif

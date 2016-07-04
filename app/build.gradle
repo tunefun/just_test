@@ -13,6 +13,7 @@ android {
 
         ndk{
             moduleName "helloNDK"
+            ldLibs "log", "z", "m"
         }
     }
     buildTypes {
